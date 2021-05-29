@@ -35,9 +35,9 @@ function handleEvent(event) {
   
   const recievemsg = { type: 'text', text: event.message.text };
   if (recievemsg.text == "test") {
-    const sendmsg = { type: 'text', text: 'Test OK!' };
+    const sendmsg = { type: 'text', text: event.message.text };
   } else {
-    const sendmsg = { type: 'text', text: 'NONO!' };
+    const sendmsg = { type: 'text', text: "AAAAA!!!!" };
   }
   /*
   if (event.source.userId == LINE_USERID_ADMIN) {
