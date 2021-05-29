@@ -43,7 +43,7 @@ function handleEvent(event) {
   console.log(event.message);
   console.log(event.source);
   
-  if (event.source.userId == LINE_USERID_ADMIN) {
+  if (event.source.userId == process.env.LINE_USERID_ADMIN) {
     if (event.message.text == 'admin') {
       const testmsg = {type: 'text', text: 'Return Admin!'};
     }
