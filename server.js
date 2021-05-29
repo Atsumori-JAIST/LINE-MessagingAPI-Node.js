@@ -39,7 +39,12 @@ function handleEvent(event) {
   // create a echoing text message
   //const echo = { type: 'text', text: event.message.text };
   
-  const testmsg = {type: 'text', text: event.message}
+  const recievemsg = { type: 'text', text: event.message.text };
+  if (recievemsg.text === 'aaa') {
+    const sendmsg = { type: 'text', text: 'Tes OK!' }
+  } else {
+    const sendmsg = { type: 'text', text: 'NONO!' }
+  }
   /*
   if (event.source.userId == LINE_USERID_ADMIN) {
     if (event.message.text == 'admin') {
