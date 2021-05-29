@@ -34,10 +34,10 @@ function handleEvent(event) {
   //const echo = { type: 'text', text: event.message.text };
   
   const recievemsg = { type: 'text', text: event.message.text };
-  if (recievemsg.text === 'aaa') {
-    const sendmsg = { type: 'text', text: 'Tes OK!' }
+  if (recievemsg.text == "test") {
+    const sendmsg = { type: 'text', text: 'Test OK!' };
   } else {
-    const sendmsg = { type: 'text', text: 'NONO!' }
+    const sendmsg = { type: 'text', text: 'NONO!' };
   }
   /*
   if (event.source.userId == LINE_USERID_ADMIN) {
