@@ -42,14 +42,16 @@ function handleEvent(event) {
   // For debug
   console.log(event.message);
   console.log(event.source);
+  console.log('process.env.LINE_USERID_ADMIN : ' + process.env.LINE_USERID_ADMIN);
   
   if (event.source.userId == process.env.LINE_USERID_ADMIN) {
     if (event.message.text == 'admin') {
-      const testmsg = {type: 'text', text: 'Return Admin!'};
+      const testmsg = { type: 'text', text: 'Login as admin!' };
     }
    else {
-     const testmsg = {type: 'text', text: 'Hello!'};
+     const testmsg = { type: 'text', text: 'Hello admin user!' };
    }
+   const testmsg = { type: 'text', text: 'KONICHIWA!' };
   }
 
   // use reply API
