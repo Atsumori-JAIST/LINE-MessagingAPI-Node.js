@@ -45,11 +45,12 @@ function handleEvent(event) {
   
   if (event.source.userId == LINE_USERID_ADMIN) {
     if (event.message.text == 'admin') {
-      const testmsg = {type: 'text', text: 'Return Admin!'}
+      const testmsg = {type: 'text', text: 'Return Admin!'};
     }
    else {
-     const testmsg = {type: 'text', text: 'Hello!'}
+     const testmsg = {type: 'text', text: 'Hello!'};
    }
+  }
 
   // use reply API
   //return client.replyMessage(event.replyToken, echo);
