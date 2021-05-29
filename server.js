@@ -41,7 +41,8 @@ function handleEvent(event) {
   const testmsg = {type: 'text', text: 'TESTEST!!'}
 
   // use reply API
-  return client.replyMessage(event.replyToken, echo);
+  //return client.replyMessage(event.replyToken, echo);
+  return client.replyMessage(event.replyToken, testmsg);
 }
 
 // listen on port
