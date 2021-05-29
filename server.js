@@ -38,7 +38,7 @@ function handleEvent(event) {
 
   // create a echoing text message
   //const echo = { type: 'text', text: event.message.text };
-  const testmsg = {type: 'text', text: '自由にテキスト返せます!'}
+  const testmsg = {type: 'text', text: event}
 
   // use reply API
   //return client.replyMessage(event.replyToken, echo);
