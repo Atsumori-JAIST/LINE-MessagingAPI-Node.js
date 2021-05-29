@@ -15,6 +15,7 @@ const client = new line.Client(config);
 // create Express app
 // about Express itself: https://expressjs.com/
 const app = express();
+const http = require('http');
 
 // register a webhook handler with middleware
 // about the middleware, please refer to doc
@@ -37,10 +38,10 @@ function handleEvent(event) {
 
   // create a echoing text message
   const echo = { type: 'text', text: event.message.text };
-  console.log('TESTETST!!!!');
 
   // use reply API
-  return client.replyMessage(event.replyToken, echo);
+  //return client.replyMessage(event.replyToken, echo);
+  return client.replyMessage(event.replyToken, "TESTTEST!!");
 }
 
 // listen on port
