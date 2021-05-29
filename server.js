@@ -38,6 +38,11 @@ function handleEvent(event) {
 
   // create a echoing text message
   //const echo = { type: 'text', text: event.message.text };
+  
+  if (event.message.text == 'AAA') {
+    const testmsg = {type: 'text', text: 'Hello!'}
+  }
+  /*
   if (event.source.userId == LINE_USERID_ADMIN) {
     if (event.message.text == 'admin') {
       const testmsg = {type: 'text', text: 'Return Admin!'}
@@ -45,6 +50,7 @@ function handleEvent(event) {
    else {
      const testmsg = {type: 'text', text: 'Hello!'}
    }
+   */
 
   // use reply API
   //return client.replyMessage(event.replyToken, echo);
