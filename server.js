@@ -1,6 +1,7 @@
 'use strict';
 
 const line = require('@line/bot-sdk');
+const express = require('express');
 
 // create LINE SDK config from env variables
 const config = {
@@ -10,6 +11,11 @@ const config = {
 
 // create LINE SDK client
 const client = new line.Client(config);
+
+// create Express app
+// about Express itself: https://expressjs.com/
+const app = express();
+const http = require('http');
 
 // register a webhook handler with middleware
 // about the middleware, please refer to doc
