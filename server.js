@@ -37,11 +37,11 @@ function handleEvent(event) {
   }
 
   // create a echoing text message
-  const echo = { type: 'text', text: event.message.text };
+  //const echo = { type: 'text', text: event.message.text };
+  const testmsg = {type: 'text', text: 'TESTEST!!'}
 
   // use reply API
-  //return client.replyMessage(event.replyToken, echo);
-  return client.replyMessage(event.replyToken, "TESTTEST!!");
+  return client.replyMessage(event.replyToken, echo);
 }
 
 // listen on port
