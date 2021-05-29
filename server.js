@@ -32,13 +32,10 @@ function handleEvent(event) {
 
   // create a echoing text message
   //const echo = { type: 'text', text: event.message.text };
+  console.log(event.message);
+  console.log(event.source);
+  const testmsg = { type: 'text', text: 'Hello TEST!' }
   
-  const recievemsg = { type: 'text', text: event.message.text };
-  if (recievemsg.text == "test") {
-    const sendmsg = { type: 'text', text: event.message.text };
-  } else {
-    const sendmsg = { type: 'text', text: "AAAAA!!!!" };
-  }
   /*
   if (event.source.userId == LINE_USERID_ADMIN) {
     if (event.message.text == 'admin') {
@@ -51,7 +48,7 @@ function handleEvent(event) {
 
   // use reply API
   //return client.replyMessage(event.replyToken, echo);
-  return client.replyMessage(event.replyToken, sendmsg);
+  return client.replyMessage(event.replyToken, testmsg);
 }
 
 // listen on port
