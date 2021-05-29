@@ -43,15 +43,16 @@ function handleEvent(event) {
   console.log(event.message);
   console.log(event.source);
   console.log('process.env.LINE_USERID_ADMIN : ' + process.env.LINE_USERID_ADMIN);
+  console.log('Type of LINE_USERID_ADMIN is ' + typeof process.env.LINE_USERID_ADMIN)
   
   if (event.source.userId == process.env.LINE_USERID_ADMIN) {
     if (event.message.text == 'admin') {
       const testmsg = { type: 'text', text: 'Login as admin!' };
-    }
-   else {
+    } else {
      const testmsg = { type: 'text', text: 'Hello admin user!' };
-   }
-   const testmsg = { type: 'text', text: 'KONICHIWA!' };
+    }
+  } else {
+    const testmsg = { type: 'text', text: 'KONICHIWA!' };
   }
 
   // use reply API
