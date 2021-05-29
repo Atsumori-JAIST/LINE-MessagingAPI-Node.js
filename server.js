@@ -45,16 +45,20 @@ function handleEvent(event) {
   console.log('process.env.LINE_USERID_ADMIN : ' + process.env.LINE_USERID_ADMIN);
   console.log('Type of LINE_USERID_ADMIN is ' + typeof process.env.LINE_USERID_ADMIN)
   
-  if (event.source.userId == process.env.LINE_USERID_ADMIN) {
-    if (event.message.text == 'admin') {
+  if (event.message.text == 'admin') {
+    console.log('文字列adminは受け取りました');
+    
+    if (event.source.userId == process.env.LINE_USERID_ADMIN) {
+      console.log('USER_ID確認でけた！');
       const testmsg = { type: 'text', text: 'Login as admin!' };
     } else {
-     const testmsg = { type: 'text', text: 'Hello admin user!' };
+      console.log('admin受け取ったけど、USER_ID確認できひんかった');
+      const testmsg = { type: 'text', text: 'Hello admin user!' };
     }
-  } else {
-    const testmsg = { type: 'text', text: 'KONICHIWA!' };
-  }
 
+    const testmsg = { type: 'text', text: 'KONICHIWA' };
+  }
+  
   // use reply API
   //return client.replyMessage(event.replyToken, echo);
   return client.replyMessage(event.replyToken, testmsg);
