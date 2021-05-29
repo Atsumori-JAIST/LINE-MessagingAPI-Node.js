@@ -15,7 +15,6 @@ const client = new line.Client(config);
 // create Express app
 // about Express itself: https://expressjs.com/
 const app = express();
-const http = require('http');
 
 // register a webhook handler with middleware
 // about the middleware, please refer to doc
@@ -47,17 +46,21 @@ function handleEvent(event) {
   
   if (event.message.text == 'admin') {
     let testmsg = { type: 'text', text: 'KONICHIWA' }
-    console.log('文字列adminは受け取りました');
+    console.log('文字列adminは確認できた');
+    console.log(testmsg + ' server.js:50')
 
     if (event.source.userId == process.env.LINE_USERID_ADMIN) {
       console.log('USER_ID確認でけた！');
       testmsg.text = 'Login as admin!';
+      console.log(testmsg + ' server.js:54')
     } else {
       console.log('admin受け取ったけど、USER_ID確認できひんかった');
       testmsg,text = 'Hello admin user!';
+      console.log(testmsg + ' server.js:58')
     }
   }
   
+  console.log(testmsg + ' server.js:63')
   // use reply API
   //return client.replyMessage(event.replyToken, echo);
   return client.replyMessage(event.replyToken, testmsg);
