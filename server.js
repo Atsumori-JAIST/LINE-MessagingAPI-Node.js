@@ -44,8 +44,8 @@ function handleEvent(event) {
   console.log('process.env.LINE_USERID_ADMIN : ' + process.env.LINE_USERID_ADMIN);
   console.log('Type of LINE_USERID_ADMIN is ' + typeof process.env.LINE_USERID_ADMIN)
   
+  let testmsg = { type: 'text', text: 'KONICHIWA' }
   if (event.message.text == 'admin') {
-    let testmsg = { type: 'text', text: 'KONICHIWA' }
     console.log('文字列adminは確認できた');
     console.log(testmsg + ' server.js:50')
 
